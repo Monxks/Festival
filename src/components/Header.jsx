@@ -9,7 +9,6 @@ function Header() {
             <div className="ml-auto">
             <NavLink to="/" className="p-3">Inicio</NavLink>
             <NavLink to="/festivales" className="p-3">Festivales</NavLink>
-            <NavLink to="/favoritos" className="p-3">Favoritos</NavLink>
             </div>
         </div>
     );
