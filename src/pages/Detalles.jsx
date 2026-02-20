@@ -24,6 +24,7 @@ function Detalles() {
         >
           <img
             src={item.foto}
+            alt={item.alt}
             className="self-stretch rounded-xl rounded-br-none rounded-bl-none object-cover"
           />
 

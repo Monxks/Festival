@@ -18,7 +18,7 @@ function Home (){
             </div>
                 <div id="cards" className="flex flex-row flex-wrap justify-around">
             {items.slice(0, 3).map((info) => (
-                <Card key={info.id} id={info.id} imagen={info.foto} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio} />))}
+                <Card key={info.id} id={info.id} imagen={info.foto} alt={info.alt} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio} />))}
                 </div>
             </div>
         </section>

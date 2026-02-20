@@ -54,7 +54,7 @@ function Festivales() {
           <button onClick={() => setSoloFavs(!soloFavs)} className={`p-2 text-white font-semibold rounded-lg ${ soloFavs ? "bg-slate-700" : "bg-slate-600 hover:bg-slate-700"}`}> {soloFavs ? "Mostrar todos" : "Solo favoritos"} </button>
         </div>
       </div>
-      <div id="cards" className={ vista === "list" ? "flex flex-col items-center" : "flex flex-wrap justify-around content-evenly"}> {itemsOrdenados.map((info) => vista === "grid" ? ( <CardGrid key={info.id} id={info.id} imagen={info.foto} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio}/>) : (<CardList key={info.id} id={info.id} imagen={info.foto} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio} />))}</div>
+      <div id="cards" className={ vista === "list" ? "flex flex-col items-center" : "flex flex-wrap justify-around content-evenly"}> {itemsOrdenados.map((info) => vista === "grid" ? ( <CardGrid key={info.id} id={info.id} imagen={info.foto} alt={info.alt} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio}/>) : (<CardList key={info.id} id={info.id} imagen={info.foto} alt={info.alt} nombre={info.nombre} ubicacion={info.ubicacion} fecha={info.fecha} descripcion={info.descripcion} precio={info.precio} />))}</div>
     </section>
   );
 }

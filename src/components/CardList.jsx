@@ -21,7 +21,7 @@ const toggleFavorito = (id) => {
   return nuevos;
 };
 
-function CardList({ id, nombre, descripcion, imagen, precio, ubicacion, fecha }) {
+function CardList({ id, nombre, descripcion, imagen, alt, precio, ubicacion, fecha }) {
   const [favorito, setFavorito] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function CardList({ id, nombre, descripcion, imagen, precio, ubicacion, fecha })
 
   return (
     <div className="p-5 bg-slate-800 m-4 w-11/12 rounded-2xl flex">
-      <img src={imagen} className="rounded-xl w-40 mr-4" />
+      <img src={imagen} alt={alt} className="rounded-xl w-40 mr-4" />
       <div className="flex-1 text-white">
         <p className="font-bold text-xl">{nombre}</p>
         <p className="font-light text-slate-300 text-md italic">
@@ -54,7 +54,7 @@ function CardList({ id, nombre, descripcion, imagen, precio, ubicacion, fecha })
         </div>
 
         <Link to={`/detalles/${id}`}>
-          <button className="text-white bg-slate-700 border-slate-700 border-7 border-r-10 border-l-10 rounded-lg hover:bg-slate-600 hover:border-slate-600 active:bg-slate-500 active:border-slate-500">
+          <button className="text-white font-bold bg-slate-600 border-slate-600 border-7 border-r-10 border-l-10 rounded-lg hover:bg-slate-700 hover:border-slate-700 active:bg-slate-500 active:border-slate-500">
             Más información
           </button>
         </Link>
